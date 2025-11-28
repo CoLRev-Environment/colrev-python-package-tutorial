@@ -1,0 +1,7 @@
+[project]
+name = "colrev-journal-formatter"
+version = "0.1.0"
+description = "The package supports formatting of journal names."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
