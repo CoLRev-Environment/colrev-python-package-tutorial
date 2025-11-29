@@ -1,0 +1,39 @@
+{
+  "name": "Python 3",
+  "extensions": [
+    "ms-toolsai.jupyter",     // Jupyter extension
+],
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "runArgs": [
+    "-v",
+    "/var/run/docker.sock:/var/run/docker.sock"
+  ],
+  "postCreateCommand": ".devcontainer/post-start.sh",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      "extensions": [
+        "markdown.showPreview",
+        "mhutchie.git-graph",
+        "mathematic.vscode-pdf",
+        "searKing.preview-vscode"
+      ],
+      "settings": {
+        "markdown.extension.preview.autoShowPreviewToSide": true,
+        "markdown.extension.print.theme": "dark",
+        "workbench.colorTheme": "Default Dark+",
+        "window.autoDetectColorScheme": true,
+        "workbench.startupEditor": "none", 
+        "markdown.preview.scrollPreviewWithEditor": true,
+        "workbench.editorAssociations": {
+          "*.md": "vscode.markdown.preview.editor"
+        }
+      }
+    }
+  }
+}
