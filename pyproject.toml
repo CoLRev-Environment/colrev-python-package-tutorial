@@ -10,3 +10,12 @@ dependencies = []
 dev = [
     "pytest>=9.0.1",
 ]
+
+
+[tool.colrev]
+colrev_doc_description = "Journal name formatter"
+colrev_doc_link = "README.md"
+search_types = []
+
+[project.entry-points.colrev]
+prep = "colrev_journal_formatter.formatter:JournalAbbreviationPrep"
